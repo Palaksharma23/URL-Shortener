@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
-const slugify = require("slugify");
-const validator = require("validator");
 
-const tourSchema = new mongoose.Schema({
+const urlSchema = new mongoose.Schema({
   url: {
     type: String,
   },
@@ -16,6 +14,6 @@ const tourSchema = new mongoose.Schema({
   },
 });
 
-const Tour = mongoose.model("Tour", tourSchema);
+const URLSchema = mongoose.model("URLSchema", urlSchema);
 
-module.exports = Tour;
+module.exports = URLSchema;
