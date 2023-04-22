@@ -1,4 +1,5 @@
 const path = require("path");
+const viewRouter = require("./Routes/viewRoutes");
 const URLShortenerRouter = require("./Routes/URLShortenerRoutes");
 const userRouter = require("./Routes/userRoutes");
 const express = require("express");
@@ -10,6 +11,7 @@ const cookieParser = require("cookie-parser");
 dotenv.config({ path: "./config.env" });
 
 const app = express();
+
 app.use(express.json());
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -24,6 +26,7 @@ const limiter = rateLimit({
     "User is allowed to make only 10 requests per hour, please try again in an hour",
 });
 
+app.use("/", viewRouter);
 app.use("/api", limiter);
 
 app.use("/api/v1/url-shortener", URLShortenerRouter);

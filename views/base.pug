@@ -1,0 +1,42 @@
+doctype html
+html 
+  head 
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel="stylesheet" href="/css/style.css")
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title URL Shortener | #{title}
+
+  body 
+
+    // HEADER
+    include header
+    
+    // Content
+    block content
+    if user
+      a(href="/logout") Log out  
+      - const firstname = user.name.split(' ')[0];
+      span= firstname
+      div.main
+        .login-form
+          h2.heading-secondary.ma-bt-lg Enter the URL
+          form.form.form--urlshorten
+            .form__group
+              label.form__label(for='name') Name
+              input#originalURL.form__input(type='text', placeholder='Your Name', required)
+            .form__group
+              button.btn.btn--green Shorten
+    else
+      include signup
+      a(href='/login') Login
+
+    // Footer
+    include footer
+
+    //- script(type="module", src='/js/login.js')
+    //- script(type="module", src='/js/signup.js')
+    //- script(type="module", src='/js/index.js')
+    script(src='/js/bundle.js')
