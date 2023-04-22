@@ -11,12 +11,9 @@ const router = express.Router();
 router.post("/short", async (req, res) => {
   const originalUrl = req.body.url;
 
-  if (!URL) {
-    URL = await URLSchema.findOne({
-      originalUrl: originalUrl,
-    });
-  }
-
+  const URL = await URLSchema.findOne({
+    originalUrl: originalUrl,
+  });
   console.log("URL", URL);
   if (!URL) {
     if (validUrl.isUri(req.body.url)) {
@@ -46,9 +43,7 @@ router.post("/short", async (req, res) => {
 router.get("/:url", async (req, res) => {
   // decode and redirect url
   try {
-    if (!url) {
-      await URLSchema.findOne({ url: req.params.url });
-    }
+    const url = await URLSchema.findOne({ url: req.params.url });
 
     if (url !== null) {
       return res.redirect(url.originalUrl);

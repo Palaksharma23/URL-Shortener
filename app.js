@@ -7,7 +7,19 @@ const rateLimit = require("express-rate-limit");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
+// const { createClient } = require("redis");
 
+// try {
+//   const client = createClient({
+//     password: "process.env.REDISPASSWORD",
+//     socket: {
+//       host: "redis-14029.c8.us-east-1-4.ec2.cloud.redislabs.com",
+//       port: 14029,
+//     },
+//   });
+// } catch (error) {
+//   console.log(error);
+// }
 dotenv.config({ path: "./config.env" });
 
 const app = express();
