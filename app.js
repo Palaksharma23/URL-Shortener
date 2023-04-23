@@ -11,6 +11,7 @@ const URLSchema = require("./models/shorturlsModel");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
+const globalErrorHandler = require("./controllers/errorController");
 const { createClient } = require("redis");
 
 dotenv.config({ path: "./config.env" });
@@ -132,6 +133,8 @@ mongoose
   });
 
 const port = process.env.PORT || 3000;
+
+app.use(globalErrorHandler);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
