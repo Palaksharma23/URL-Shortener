@@ -12081,7 +12081,7 @@ var signup = /*#__PURE__*/function () {
 exports.signup = signup;
 var urlshorten = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(url) {
-    var res;
+    var res, paragraph;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
@@ -12098,7 +12098,9 @@ var urlshorten = /*#__PURE__*/function () {
           res = _context2.sent;
           if (res.data.status === "success") {
             console.log("success", "Url Shorten up successfully!");
-            console.log(res.data.data.URL.url); // milisecond
+            console.log(res.data.data.URL.url);
+            paragraph = document.querySelector(".shorturl");
+            paragraph.innerHTML = "".concat(location.protocol, "://").concat(location.host, "/").concat(res.data.data.URL.url);
           }
           // console.log('res', res);
           _context2.next = 10;

@@ -37,7 +37,9 @@ export const urlshorten = async (url) => {
 
     if (res.data.status === "success") {
       console.log("success", "Url Shorten up successfully!");
-      console.log(res.data.data.URL.url); // milisecond
+      console.log(res.data.data.URL.url);
+      const paragraph = document.querySelector(".shorturl");
+      paragraph.innerHTML = `${location.protocol}://${location.host}/${res.data.data.URL.url}`;
     }
     // console.log('res', res);
   } catch (err) {
