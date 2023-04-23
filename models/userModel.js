@@ -28,10 +28,12 @@ const userSchema = new mongoose.Schema({
     select: false,
   },
   UpdatedAt: Date,
-  urls: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Shorturls",
-  },
+  urls: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Shorturls",
+    },
+  ],
   passwordConfirm: {
     type: String,
     required: [true, "Please confirm your password"],

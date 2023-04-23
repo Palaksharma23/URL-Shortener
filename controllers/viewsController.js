@@ -1,7 +1,6 @@
 const catchAsync = require("../utils/catchAsync");
-const User = require("../models/userModel");
 
-exports.getOverview = catchAsync(async (req, res, next) => {
+exports.getHome = catchAsync(async (req, res, next) => {
   res.status(200).render("base", {
     title: "URL Shortener",
   });

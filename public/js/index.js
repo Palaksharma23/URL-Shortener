@@ -1,6 +1,6 @@
 import "@babel/polyfill";
 import { login, logout } from "./login";
-import { signup, urlshorten } from "./signup";
+import { signup, urlshorten } from "./signupshorten";
 
 const loginForm = document.querySelector(".form--login");
 const signupForm = document.querySelector(".form--signup");
