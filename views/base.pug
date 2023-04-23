@@ -17,23 +17,23 @@ html
     // Content
     block content
     if user
-      a(href="/logout") Log out  
-      - const firstname = user.name.split(' ')[0];
-      span= firstname
       div.main
+        p.form__labelupper Hello 
+        - const firstname = user.name.split(' ')[0];
+        span.form__labelupper= firstname
+        a.logout(href="/logout") Log out  
         .login-form
           h2.heading-secondary.ma-bt-lg Enter the URL
           form.form.form--urlshorten
             .form__group
               label.form__label(for='name') Name
               input#originalURL.form__input(type='text', placeholder='Your Name', required)
-            p Your Short URL is 
-            p.shorturl 
+            p.form__label Your Short URL is 
+            p.shorturl
             .form__group
               button.btn.btn--green Shorten
     else
       include signup
-      a(href='/login') Login
 
     // Footer
     include footer

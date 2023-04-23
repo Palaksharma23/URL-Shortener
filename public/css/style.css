@@ -233,6 +233,7 @@ body {
 .btn--green {
   background-color: #55c57a;
   color: #fff;
+  margin-bottom: 2rem;
 }
 .btn--green::after {
   background-color: #55c57a;
@@ -898,7 +899,7 @@ body {
 .nav__el:visited {
   color: #f7f7f7;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   text-decoration: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -908,11 +909,37 @@ body {
   align-items: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  font-weight: 400;
+  font-weight: 500;
   background: none;
   border: none;
   cursor: pointer;
   font-family: inherit;
+}
+.logout {
+  color: black;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 0% 2%;
+  font-size: 2.2rem;
+  float: right;
+  margin-left: auto;
+  display: inline;
+  text-decoration: none;
+}
+.logout:hover {
+  color: #20bf6b;
+  background-color: white;
+  border: 2px solid #20bf6b;
+}
+.inline {
+  display: inline;
+}
+.shorturl {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 .nav__el:hover,
 .nav__el:active {
@@ -1272,7 +1299,12 @@ body {
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
-
+.form__labelupper {
+  display: inline;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
 .form__photo-upload {
   display: -webkit-box;
   display: -ms-flexbox;
