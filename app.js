@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 
 const limiter = rateLimit({
-  max: 100,
+  max: 10,
   windowMs: 60 * 60 * 1000,
   message:
     "User is allowed to make only 10 requests per hour, please try again in an hour",
