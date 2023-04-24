@@ -22,10 +22,11 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Important Links](#important-links-related-to-the-project)
 - [Technology Used](#technology-used)
 - [Features](#features)
 - [Top Level Directory Structure](#top-level-directory-structure)
--  [Screenshots of the project](#screenshots-of-the-project)
+- [Screenshots of the project](#screenshots-of-the-project)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [Feedback](#feedback)
@@ -36,6 +37,10 @@
 Our **URL shortener** app simplifies long and complex URLs, making it **easy to share and remember links**. With just a few clicks, our app generates short, easy-to-type URLs that redirect to your desired page, saving you time and making it simple to share links on social media, email, or text messages.
 
 Say goodbye to long and complicated URLs and hello to our user-friendly URL shortener ❤.
+
+### Important links related to the project
+* Deployed Website 👉 https://urlshortenerapp.onrender.com/
+* Postman API Documentation 👉 https://documenter.getpostman.com/view/27055315/2s93Y5Nf7N
 
 ## Technology Used
 
